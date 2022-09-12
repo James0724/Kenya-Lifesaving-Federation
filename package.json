@@ -14,9 +14,18 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
+    "@popperjs/core": "^2.11.6",
+    "bootstrap": "^5.2.1",
     "gatsby": "^4.22.1",
+    "gatsby-plugin-google-fonts": "^1.0.1",
+    "gatsby-plugin-sass": "^5.22.0",
+    "node-sass": "^7.0.3",
     "react": "^18.1.0",
-    "react-dom": "^18.1.0"
+    "react-dom": "^18.1.0",
+    "react-slick": "^0.29.0",
+    "rfs": "^9.0.6",
+    "sass": "^1.54.9",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "prettier": "^2.7.1"
