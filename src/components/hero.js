@@ -1,6 +1,6 @@
 import React from "react"
-import SimpleSlider from "./slider"
+import ImageSlider from "./slider"
 
 export default function Hero() {
-  return <SimpleSlider />
+  return <ImageSlider />
 }

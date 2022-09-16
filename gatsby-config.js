@@ -1,9 +1,6 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.com/docs/gatsby-config/
- */
-
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 module.exports = {
   plugins: [
     {
@@ -18,6 +15,15 @@ module.exports = {
         display: "swap",
       },
     },
+    {
+      resolve: "gatsby-source-datocms",
+      options: {
+        apiToken: process.env.DATOCMS_API_TOKEN,
+      },
+    },
     `gatsby-plugin-sass`,
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
   ],
 }

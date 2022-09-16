@@ -7,6 +7,7 @@ export default function Home() {
     <Layout>
       <sections.HeroSection />
       <sections.Introduction />
+      <sections.Services />
     </Layout>
   )
 }
