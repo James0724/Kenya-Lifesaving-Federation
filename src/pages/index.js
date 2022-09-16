@@ -8,6 +8,10 @@ export default function Home() {
       <sections.HeroSection />
       <sections.Introduction />
       <sections.Services />
+      <sections.SwimingAd />
+      <sections.Portfolio />
+      <sections.ClassesAd />
+      <sections.Blog />
     </Layout>
   )
 }

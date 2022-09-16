@@ -9,7 +9,8 @@ module.exports = {
         fonts: [
           `Poppins\:200,300,400,500,600,700,800,900`,
           `Oxygen\:300,400,700`,
-          `Playfair Display\:600,700,800`,
+          `Playfair Display\:400,500,700,800`,
+          `Roboto\:600,700,900`,
           `Nanum Gothic Coding\:400,700`,
         ],
         display: "swap",

@@ -62,9 +62,9 @@ strong {
 }
 h1 {
   color: $blue;
-  font-weight: 700;
+  font-weight: 900;
   letter-spacing: 0.1em;
-  font-family: "Playfair Display", serif;
+  font-family: "Roboto", sans-serif;
 }
 
 a {
@@ -87,11 +87,11 @@ input {
 
 /* Custom classes */
 .kicker {
-  text-transform: uppercase;
+  text-transform: capitalize;
   @include font-size(16px);
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: 0.1em;
-  font-family: "Nanum Gothic Coding", monospace;
+  font-family: "Playfair Display", serif;
 }
 .waves {
   position: absolute;
@@ -108,5 +108,15 @@ input {
 @media (max-width: 560px) {
   .waves {
     bottom: 10rem;
+  }
+}
+
+.links {
+  color: #fff;
+  border-radius: 0;
+  background-color: $dark-blue;
+  &:hover {
+    transform: scale(1.2, 1.2);
+    border: 1px solid transparent;
   }
 }

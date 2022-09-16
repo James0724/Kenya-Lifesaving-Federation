@@ -82,8 +82,8 @@
 /****************************About Image Intro Section***************************/
 
 .crop-image-wrapper {
-  width: 60%;
-  height: 600px;
+  width: 70%;
+  @include rfs(40rem, height);
 }
 .crop-image {
   height: 100%;
@@ -127,69 +127,94 @@
   width: 50%;
   top: 25%;
 }
-@media (max-width: 1000px) {
+@media (max-width: 991px) {
   .crop-image-wrapper {
     width: 100%;
-    height: 600px;
-  }
-  .second-image-wrapper {
-    display: none !important;
-  }
-  // .crop-image {
-  //   height: 100%;
-  //   width: 100%;
-  //   border-radius: 5px;
-  // }
-  // .first-image-wrapper,
-  // .second-image-wrapper {
-  //   padding: 0;
-  //   border-radius: 1rem;
-  //   overflow: hidden;
-  // }
-  // .first-image-wrapper {
-  //   margin-right: 10px;
-  // }
-  // .second-image-wrapper {
-  //   margin-left: 10px;
-  //   position: relative;
-  //   margin-top: -3rem;
-  // }
-
-  // .first-image {
-  //   &::before,
-  //   &::after {
-  //     background-position: left center;
-  //   }
-  // }
-  // .second-image {
-  //   &::before,
-  //   &::after {
-  //     background-position: right center;
-  //   }
-  // }
-  .about-wrapper {
-    width: 100%;
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-    // flex-direction: column;
   }
   .about-introduction {
-    width: 80%;
-    opacity: 0.7;
-    &:hover {
-      opacity: 1;
+    position: relative;
+    width: 100%;
+    @include rfs(3rem, margin-top);
+  }
+}
+
+/****************************Class Ad***************************/
+.class-ad {
+  position: relative;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  .waves {
+    position: absolute;
+    bottom: 0rem;
+    left: 0;
+    width: 100%;
+  }
+
+  @media (max-width: 970px) {
+    .waves {
+      bottom: -4.5rem;
+    }
+  }
+  @media (max-width: 560px) {
+    .waves {
+      bottom: -1rem;
     }
   }
 }
 
-@media (max-width: 768px) {
-  .about-introduction {
-    width: 80%;
-    opacity: 0.7;
-    @include rfs(50px, left);
-    &:hover {
-      opacity: 1;
+/****************************Swiming Ad***************************/
+.ad-background {
+  position: relative;
+  .waves {
+    position: absolute;
+    bottom: 0rem;
+    left: 0;
+    width: 100%;
+  }
+
+  @media (max-width: 970px) {
+    .waves {
+      bottom: -4.5rem;
     }
+  }
+  @media (max-width: 560px) {
+    .waves {
+      bottom: -1rem;
+    }
+  }
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(180deg, #0a112885 0%, #0a1128 100%);
+}
+
+/****************************Portfolio***************************/
+.portfolio-image-height {
+  height: 30rem;
+}
+.portfolio-image {
+  width: 45%;
+  padding: 0;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin: 1rem;
+}
+
+@media (max-width: 560px) {
+  .portfolio-image {
+    width: 100%;
+    margin: 0.5rem;
   }
 }

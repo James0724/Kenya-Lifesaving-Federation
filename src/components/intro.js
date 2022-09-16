@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, Link, useStaticQuery } from "gatsby"
 import { getImage } from "gatsby-plugin-image"
 import { convertToBgImage } from "gbimage-bridge"
 import BackgroundImage from "gatsby-background-image"
@@ -7,28 +7,33 @@ import BackgroundImage from "gatsby-background-image"
 export default function Home() {
   const results = useStaticQuery(graphql`
     {
-      allDatoCmsAboutImage {
+      allDatoCmsClassImagesAd {
         nodes {
-          aboutBackgroundImage {
-            alt
+          classesAdBackground {
             gatsbyImageData(placeholder: BLURRED)
+            alt
           }
         }
       }
     }
   `)
 
-  const data = results.allDatoCmsAboutImage.nodes
+  const data = results.allDatoCmsClassImagesAd.nodes
   const items = Object.assign({}, ...data)
-  const dataImage = items.aboutBackgroundImage
-  const image = getImage(dataImage.gatsbyImageData)
-  const bgImage = convertToBgImage(image)
+
+  const dataImageFirst = items.classesAdBackground[0]
+  const dataImageSecond = items.classesAdBackground[1]
+  const imageFirst = getImage(dataImageFirst.gatsbyImageData)
+  const imageSecond = getImage(dataImageSecond.gatsbyImageData)
+
+  const bgImageFirst = convertToBgImage(imageFirst)
+  const bgImageSecond = convertToBgImage(imageSecond)
 
   return (
     <div className="container">
       <div className="flex flex-column mt-5 mb-5 ">
         <div className="flex flex-column">
-          <h3 className="kicker text-center">who we are</h3>
+          <h3 className="kicker text-center mb-1">who we are</h3>
           <h1 className="text-center text-uppercase">
             Kenya Lifesaving Federation
           </h1>
@@ -37,9 +42,9 @@ export default function Home() {
       <div className="container pt-5 pb-5  about-wrapper">
         <div className="crop-image-wrapper ">
           <div className=" row gx-3 w-100 h-100">
-            <div className="col-sm-12 col-md-6  first-image-wrapper">
+            <div className="col first-image-wrapper">
               <BackgroundImage
-                {...bgImage}
+                {...bgImageFirst}
                 className="crop-image first-image"
                 style={{
                   // Defaults are overwrite-able by setting one or each of the following:
@@ -47,9 +52,9 @@ export default function Home() {
                 }}
               ></BackgroundImage>
             </div>
-            <div className="col crop-image second-image-wrapper d-none d-lg-block">
+            <div className="col crop-image second-image-wrapper">
               <BackgroundImage
-                {...bgImage}
+                {...bgImageSecond}
                 className="crop-image second-image"
                 style={{
                   // Defaults are overwrite-able by setting one or each of the following:
@@ -71,6 +76,11 @@ export default function Home() {
                 lifesaving services and oversee lifesaving sport throughout the
                 world.
               </p>
+            </div>
+            <div className="d-flex w-100 mt-3 mb-3 justify-content-center">
+              <Link className="links btn">
+                <span>Read More</span>
+              </Link>
             </div>
           </div>
         </div>

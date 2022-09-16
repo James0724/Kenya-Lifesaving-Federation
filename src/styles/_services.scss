@@ -13,7 +13,7 @@
 }
 
 .single-class.cobalt-border {
-  border-color: #0148bc;
+  border-color: $dark-blue;
 }
 
 .single-class.cinnabar-border {
@@ -37,7 +37,7 @@
 
 .class-content h3 {
   bottom: 55%;
-  color: #0148bc;
+  color: $dark-blue;
   @include font-size(18px);
   font-size: 18px;
   font-weight: 700;
@@ -64,10 +64,11 @@
 }
 
 .appoint-content a.read-more,
+.links,
 .class-left button,
 .read-more,
 .table-body > button {
-  background: #0148bc;
+  background: $dark-blue;
   border: 1px solid transparent;
   margin-bottom: 30px;
   -webkit-transition: all 0.5s ease 0s;
@@ -84,16 +85,17 @@
 }
 
 .appoint-content a.read-more:hover,
+.links,
 .class-left button:hover,
 .read-more:hover,
 .table-body > button:hover {
   background: transparent;
-  /*    border: 1px solid #0148BC;*/
-  color: #0148bc;
+  border: 1px solid $dark-blue;
+  color: $dark-blue;
 }
 
 .table-body > button {
-  color: #0148bc;
+  color: $dark-blue;
 }
 
 .class-content a.btn::before,
@@ -101,7 +103,7 @@
 .class-left button::before,
 .read-more::before,
 .table-body > button::before {
-  background-color: #0148bc;
+  background-color: $dark-blue;
   content: "";
   height: 100%;
   left: 0;
@@ -122,7 +124,7 @@
 }
 
 .table-body > button.active::before {
-  background-color: #0148bc;
+  background-color: $dark-blue;
 }
 
 .class-content a.btn::after,
@@ -161,7 +163,7 @@
 
 .appoint-content a.read-more::after,
 .our-classes-area button::after {
-  border: 1px solid #0148bc;
+  border: 1px solid $dark-blue;
 }
 
 .table-body > button::after {
@@ -200,7 +202,7 @@
 
 .table-body > button:hover,
 .table-body > button.active {
-  background: #0148bc;
+  background: $dark-blue;
   color: #fff;
 }
 
@@ -239,7 +241,7 @@
 
 .class-icon h2 {
   font-size: 36px;
-  color: #0148bc;
+  color: $dark-blue;
   text-align: center;
   line-height: 145px;
 }
